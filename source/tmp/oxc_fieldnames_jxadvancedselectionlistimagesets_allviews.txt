@@ -1,0 +1,1 @@
+a:1:{s:7:"content";a:12:{s:4:"oxid";i:0;s:21:"selectionlistoption_1";i:0;s:21:"selectionlistoption_2";i:0;s:21:"selectionlistoption_3";i:0;s:21:"selectionlistoption_4";i:0;s:21:"selectionlistoption_5";i:0;s:21:"selectionlistoption_6";i:0;s:21:"selectionlistoption_7";i:0;s:21:"selectionlistoption_8";i:0;s:5:"image";i:0;s:9:"productid";i:0;s:11:"description";i:0;}}

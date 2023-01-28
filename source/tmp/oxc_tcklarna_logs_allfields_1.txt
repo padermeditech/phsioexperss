@@ -1,0 +1,1 @@
+a:1:{s:7:"content";a:10:{s:4:"oxid";i:0;s:16:"tcklarna_orderid";i:0;s:8:"oxshopid";i:0;s:12:"tcklarna_mid";i:0;s:19:"tcklarna_statuscode";i:0;s:15:"tcklarna_method";i:0;s:12:"tcklarna_url";i:0;s:19:"tcklarna_requestraw";i:0;s:20:"tcklarna_responseraw";i:0;s:13:"tcklarna_date";i:0;}}

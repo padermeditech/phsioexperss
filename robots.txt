@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.physioexpress.de/sitemap.xml.gz
+Sitemap: https://www.physioexpress.de/sitemap.xml.gz.gz

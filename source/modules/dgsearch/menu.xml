@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<OX>
+    <OXMENU id="DGMODULE">
+        <MAINMENU id="mxtools">
+            <SUBMENU id="dgsearch" cl="dgsearch_admin" list="dgsearch_list">
+                <TAB id="dgsearch_main" cl="dgsearch_main" />
+                <TAB id="dgsearch_support" cl="dgsearch_support" />
+                <TAB id="dgsearch_setup" cl="dgsearch_setup" />
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>

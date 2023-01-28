@@ -1,0 +1,20 @@
+{
+    "name": "alphasys/asy_b2b",
+    "description": "B2B module.",
+    "type": "oxideshop-module",
+    "keywords": ["oxid", "modules", "eShop", "b2b"],
+    "homepage": "https://www.alpha-sys.de",
+    "version": "2.0.1",
+    "extra": {
+        "oxideshop": {
+            "target-directory": "asy/asy_b2b"
+        }
+    },
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "AlphaSys\\AsyB2B\\": "../../../source/modules/asy/asy_b2b"
+        }
+    }
+}

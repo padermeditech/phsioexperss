@@ -1,0 +1,88 @@
+﻿﻿Simple Search
+ 
+
+Vielen Dank für Ihre Bestellung bei draufgeschaut.de.
+
+Zum Betrieb des Moduls muss der IonCube loader installiert sein.
+Ob dieser bei Ihnen installiert ist können Sie im OXID Admin unter Service => Systeminfo einsehen.
+
+Sollte diese Systemvorraussetzung nicht gegeben sein installieren Sie das Modul NICHT. 
+Kontaktieren Sie ihren Provider um die entsprechenden Systemvorraussetzung mit Ihren Provider herzustellen.
+
+Beim Update von einer OXID Version kleiner 6.0 ist es wichtig, dass Sie unter Module das alte Modul deaktivieren.
+Vor dem kopieren der neuen Daten müssen die alten Dateien entfernt werden.
+
+Sie können gefahrlos alle Dateien die mit dgsearch* beginnen löschen, alle Dateien für das Modul sind im dgsearch.zip enthalten.
+ 
+Zur Installation führen Sie folgende Schritte durch:
+
+ - Erstinstallation:
+ 
+ - - Produktivsystem:
+     composer config repositories.draufgeschaut composer https://update.draufgeschaut.de
+     composer require --update-no-dev draufgeschaut/dgsearch
+     
+ - - Testsystem/Entwicklungssystem:
+     composer config repositories.draufgeschaut composer https://update.draufgeschaut.de
+     composer require draufgeschaut/dgsearch
+     
+ - Modulupdate:
+ 
+ - - Produktivsystem:
+     composer config repositories.draufgeschaut composer https://update.draufgeschaut.de
+     composer require --no-dev draufgeschaut/dgsearch
+     
+ - - Testsystem/Entwicklungssystem:
+     composer config repositories.draufgeschaut composer https://update.draufgeschaut.de 
+     composer update draufgeschaut/dgsearch
+ 
+
+4. Aktivieren Sie das Modul unter Erweiterungen => Module => Simple Search
+
+
+
+Bei Modulen mit Konfiguration nehmen Sie unter [dg] Module => Tools => Simple Search die weiteren Einstellungen vor.
+
+
+Nach der Installation aktualisieren sie unter Service => Tools die Views und Leeren Sie bitte noch das Verzeichnis /tmp im Shop, außer der Datei ".htaccess".
+
+
+Bitte nutzen Sie falls im Modul vorhanden den Support-Reiter für Supportanfragen, Vielen Dank.
+
+Falls Sie die Installation nicht selbst ausführen möchten können Sie unter www.volker-doerk.de die Installation bestellen.
+
+draufgeschaut.de
+E-Mail: support@draufgeschaut.de 
+URL: http://www.volker-doerk.de
+
+Dateiliste:
+ - modules\dgsearch\Application\Controller\Admin\dgsearch_admin.php
+ - modules\dgsearch\Application\Controller\Admin\dgsearch_list.php
+ - modules\dgsearch\Application\Controller\Admin\dgsearch_main.php
+ - modules\dgsearch\Application\Controller\Admin\dgsearch_setup.php
+ - modules\dgsearch\Application\Controller\Admin\dgsearch_support.php
+ - modules\dgsearch\Application\Controller\dgsearchpopup.php
+ - modules\dgsearch\Application\Model\dgsearch.php
+ - modules\dgsearch\Application\Model\dgsearchconfig.php
+ - modules\dgsearch\Application\Model\dgsearchevents.php
+ - modules\dgsearch\Application\Model\dgsearchupdate.php
+ - modules\dgsearch\Application\translations\de\dgsearch_lang.php
+ - modules\dgsearch\Application\translations\en\dgsearch_lang.php
+ - modules\dgsearch\Application\translations\fr\dgsearch_lang.php
+ - modules\dgsearch\Application\views\admin\de\dgsearch_lang.php
+ - modules\dgsearch\Application\views\admin\en\dgsearch_lang.php
+ - modules\dgsearch\Application\views\admin\fr\dgsearch_lang.php
+ - modules\dgsearch\Application\views\admin\tpl\dgsearch_admin.tpl
+ - modules\dgsearch\Application\views\admin\tpl\dgsearch_exception.tpl
+ - modules\dgsearch\Application\views\admin\tpl\dgsearch_list.tpl
+ - modules\dgsearch\Application\views\admin\tpl\dgsearch_main.tpl
+ - modules\dgsearch\Application\views\admin\tpl\dgsearch_setup.tpl
+ - modules\dgsearch\Application\views\admin\tpl\dgsearch_support.tpl
+ - modules\dgsearch\Application\views\azure\tpl\dgsearchpopup.tpl
+ - modules\dgsearch\Modul\dgsearch_navigation.php
+ - modules\dgsearch\Modul\dgsearch_oxsearch.php
+ - modules\dgsearch\out\admin\img\dgmute.gif
+ - modules\dgsearch\out\azure\src\dgsearch.css
+ - modules\dgsearch\out\azure\src\dgsearch.js
+ - modules\dgsearch\out\blocks\dgsearch_base_js.tpl
+ - modules\dgsearch\out\blocks\dgsearch_base_style.tpl

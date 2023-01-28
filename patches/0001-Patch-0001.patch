@@ -1,0 +1,57 @@
+From 2669ccc4262bd48fcdbb349580188dfd48833e6e Mon Sep 17 00:00:00 2001
+From: "v.pastovenskyi" <v.pastovenskyi@gmail.com>
+Date: Sun, 13 Jun 2021 16:18:30 +0300
+Subject: [PATCH] After patch
+
+---
+ .../views/azure/tpl/dgsearchpopup.tpl         | 33 +++++++------------
+ 1 file changed, 11 insertions(+), 22 deletions(-)
+
+diff --git a/modules/dgsearch/Application/views/azure/tpl/dgsearchpopup.tpl b/modules/dgsearch/Application/views/azure/tpl/dgsearchpopup.tpl
+index c5dd65e..e45b556 100644
+--- a/modules/dgsearch/Application/views/azure/tpl/dgsearchpopup.tpl
++++ b/modules/dgsearch/Application/views/azure/tpl/dgsearchpopup.tpl
+@@ -77,29 +77,18 @@
+     [{foreach from=$oView->getArticleList() name=article item=oArticle}]
+       <tr>
+ 	    <td class="article">
+-          <div class="product_image_s_container">
+-            <a href="[{ $oArticle->getLink() }]"><img border="0" alt="" src="[{ $oArticle->getIconUrl() }]" height="42" /></a>
+-          </div>
++            <div class="article-block">
++            <a href="[{ $oArticle->getLink() }]">
++                <div class="product_image_s_container">
++                    <img alt="" src="[{ $oArticle->getIconUrl() }]" />
++                </div>
++                <div class="article-info">
++                    <span>[{$oArticle->oxarticles__oxtitle->value }]</span>
++                    <small>[{oxmultilang ident="PRODUCT_NO" suffix="COLON"}] [{$oArticle->oxarticles__oxartnum->value}]</small>
++                </div>
++            </a>
++            </div>
+         </td>
+-	    <td class="article">
+-         <a href="[{ $oArticle->getLink() }]">[{ $oArticle->oxarticles__oxtitle->value }]</a>
+-         [{ if $oArticle->oxarticles__oxshortdesc->value }]
+-         <br />
+-         <small>[{ $oArticle->oxarticles__oxshortdesc->value|truncate:60 }]</small>
+-         [{/if}]
+-        </td>
+-        [{ if $dgSearchManufacturer|@count > 0 || $dgSearchCategory|@count > 0 }]
+-          [{ if $smarty.foreach.article.first }]
+-            <td rowspan="[{ $oView->getArticleList()|count +1 }]" valign="top"> 
+-              [{ if $dgSearchManufacturer|@count > 0 }]
+-                [{$smarty.capture.dgSearchManufacturerHtml}]
+-              [{/if}]
+-              [{ if $dgSearchCategory|@count > 0 }]
+-                 [{$smarty.capture.dgSearchCategoryHtml}]
+-              [{/if}]
+-            </td>
+-          [{/if}]
+-        [{/if}]
+       </tr>
+     [{/foreach}]
+ </table>
+-- 
+2.24.1.windows.2
+

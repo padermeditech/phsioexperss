@@ -1,0 +1,43 @@
+{
+    "name":        "draufgeschaut/dgsearch",
+    "description": "Simple Search",
+    "type":        "oxideshop-module",
+    "keywords":    [ "draufgeschaut", "oxid", "modul", "eshop", "search" ],
+    "homepage":    "https://www.volker-doerk.de",
+    "time":        "2021-06-18",
+    "license":     "Commercial",
+    "authors":     [
+        {
+            "name":  "Volker Doerk",
+            "email": "info@draufgeschaut.de",
+            "homepage": "https://www.volker-doerk.de",
+            "role": [ "Developer", "Owner" ]
+        }
+    ],
+    "support": {
+        "email": "support@draufgeschaut.de"
+    },
+    "extra":  {
+        "oxideshop": {
+            "target-directory": "dgsearch",
+            "source-directory": "modules/dgsearch",
+            "blacklist-filter": [
+                "*.json",
+				"*dgsearch_install.txt",
+                "metadate.php"
+            ]
+        }
+    },
+    "version": "5.00",    
+    "require": {
+        "ext-ioncube-loader": "*",
+        "oxid-esales/oxideshop-metapackage-ce": ">=6.0.0 <=6.0.3 - >=6.3.0 <=6.3.0",
+        "php": "7.0.* - 7.4.*",
+        "draufgeschaut/dgconnector": "^1.2"
+    },
+    "autoload":    {
+        "psr-4": {
+            "dgModule\\dgSearchModul\\": "../../../source/modules/dgsearch"             
+        }
+    }
+}
