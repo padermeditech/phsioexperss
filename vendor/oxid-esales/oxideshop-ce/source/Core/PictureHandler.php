@@ -252,7 +252,7 @@ class PictureHandler extends \OxidEsales\Eshop\Core\Base
         }
 
         $sDirPrefix = $oConfig->getOutDir();
-        $sUrlPrefix = $oConfig->getOutUrl($blSSL, $blAdmin, $oConfig->getConfigParam('blNativeImages'), true);
+        $sUrlPrefix = $oConfig->getOutUrl($blSSL, $blAdmin, $oConfig->getConfigParam('blNativeImages'));
 
         return ['path' => $sPath, 'url' => str_replace($sDirPrefix, $sUrlPrefix, $sPath)];
     }
