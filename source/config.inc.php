@@ -4,7 +4,7 @@
  * See LICENSE file for license details.
  */
 
-    // Database connection information
+    // Database connection `information
     $this->dbType = 'pdo_mysql';
     $this->dbHost = 'localhost'; // database host name
     $this->dbPort  = 3306; // tcp port to which the database is bound
@@ -14,6 +14,7 @@
     $this->sShopURL     = 'https://www.physioexpress.de'; // eShop base url, required
     $this->sSSLShopURL  = 'https://www.physioexpress.de';            // eShop SSL url, optional
     $this->sAdminSSLURL = 'https://www.physioexpress.de/admin';            // eShop Admin SSL url, optional
+    $this->cdnURL = 'https://physioexpress-1d826.kxcdn.com/';            // eShop CdnUrl
     $this->sShopDir     = '/www/htdocs/w00d7012/Physioexpress2020_V6/source';
     $this->sCompileDir  = '/www/htdocs/w00d7012/Physioexpress2020_V6/source/tmp';
 

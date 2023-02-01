@@ -1212,7 +1212,7 @@ class Config extends \OxidEsales\Eshop\Core\Base
      *
      * @return string
      */
-    public function getOutUrl($ssl = null, $admin = null, $nativeImg = false)
+    public function getOutUrl($ssl = null, $admin = null, $nativeImg = false, $isCdn = false)
     {
         $ssl = is_null($ssl) ? $this->isSsl() : $ssl;
         $admin = is_null($admin) ? $this->isAdmin() : $admin;
@@ -1229,6 +1229,10 @@ class Config extends \OxidEsales\Eshop\Core\Base
         } else {
             $url = ($nativeImg && !$admin) ? $this->getShopUrl() : $this->getConfigParam('sShopURL');
         }
+
+	    if($isCdn) {
+		    $url = $this->getConfigParam('cdnURL');
+	    }
 
         return $url . $this->_sOutDir . '/';
     }
